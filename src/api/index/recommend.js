@@ -10,12 +10,14 @@ export const swipe = (params) => {
 //获取推荐歌单
 export const getRecommendResource = () => {
     return http({
+        method:'post',
         url: `/recommend/resource`,
     })
 };
 //获取每日推荐歌曲
 export const getRecommendSongs = () => {
     return http({
+        method:'post',
         url: `/recommend/songs`
     })
 };

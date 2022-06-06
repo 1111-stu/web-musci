@@ -1,6 +1,7 @@
 import axios from "axios"
 const http = axios.create({
-        baseURL: '/api', //当请求接口的时候遇到 "/api" 会自动转为target里的服务，解决跨域
+        // baseURL: '/api', //当请求接口的时候遇到 "/api" 会自动转为target里的服务，解决跨域
+        baseURL: 'https://netease-cloud-music-api-three-theta-36.vercel.app/',
         timeout:20000,
     })
     //请求拦截

@@ -7,6 +7,7 @@ import store from './store'
 import Vant from 'vant';
 import 'vant/lib/index.css'
 
+
 Vue.use(Vant);
 
 // 导入postcss-pxtorem 配置

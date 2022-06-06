@@ -12,7 +12,7 @@
           </ul>
         </li>
       </ul>
-      //右侧首字母快速入口
+      <!-- 右侧首字母快速入口 -->
       <div class="list-shortcut" @touchmove.stop.prevent="onShortcutTouchMove">
         <ul>
           <li v-for="(item, index) in shortcutList" :key="index" @touchstart="onShortcutTouchStart($event, index)" class="item">{{item}}</li>

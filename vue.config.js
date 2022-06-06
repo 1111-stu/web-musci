@@ -14,7 +14,7 @@ module.exports = {
                 // 当请求接口的时候遇到 "/api" 会自动转为target里的服务，解决跨域
                 // 配置域名
                 // target: 'http://localhost:3000/',
-                target: 'https://netease-cloud-music-api-delta-smoky.vercel.app/',
+                target: 'https://netease-cloud-music-api-three-theta-36.vercel.app/',
                 ws: true,
                 changeOrigin: true,
                 pathRewrite: {

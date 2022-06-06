@@ -3,7 +3,9 @@
     <img :src="playlist.coverImgUrl" alt="">
     <div class="back">
       <van-icon name="arrow-left" @click="$router.go(-1)" />
-      <span>歌单</span>
+      <slot>
+         <span>歌单</span>
+      </slot>
     </div>
     <div class="descript-box">
       <div class="description">

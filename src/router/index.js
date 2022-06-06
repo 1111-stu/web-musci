@@ -6,9 +6,8 @@ Vue.use(VueRouter)
 import Home from "../views/Home.vue"
 import Register from "../components/Register.vue"
 import Login from "../components/Login.vue"
-import Recommend from "../components/index/Recommend.vue"
-import Rank from "../components/index/Rank.vue"
-import Singer from "../components/index/Singer.vue"
+// import Recommend from "../components/index/Recommend.vue"
+// import Rank from "../components/index/rank/Rank.vue"
 const router = new VueRouter({
   routes: [
     {
@@ -18,9 +17,6 @@ const router = new VueRouter({
     {
       path: '/home',
       component: Home,
-      children: [
-        
-      ]
     },
     {
       path: '/register',
@@ -32,20 +28,38 @@ const router = new VueRouter({
     },
     {
       path:'/recommend',
-      component: Recommend
+      component:()=>import('components/index/Recommend.vue')
     },
     {
       path:'/rank',
-      component: Rank
+      component:()=>import('components/index/rank/Rank.vue')
     },
     {
       path:'/singer',
-      component:Singer
+      component:()=>import('components/index/Singer.vue')
     },
     {
       path:'/rmdListDetail',
       component:()=>import('components/songsListDetail/rmdListDetail.vue')
+    },
+    {
+      path:'/search',
+      component:()=>import('components/search/Search.vue')
+    },
+    {
+      path:'/searchResult',
+      component:()=>import('components/search/SearchResult.vue')
+    },
+    {
+      path:`/toplistSongs`,
+      component:()=>import('components/index/rank/ToplistSongs.vue')
     }
   ]
 })
+// router.beforeEach((to, from, next) => {
+//   console.log(to)
+//   // if(to.path=='/login'){
+//   //   store.state.
+//   // }
+// })
 export default router

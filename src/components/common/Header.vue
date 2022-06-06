@@ -1,14 +1,11 @@
 <template>
   <div>
-    <!-- <van-row type="flex" justify="space-between">
-    <van-col span="8"> <van-icon name="wap-nav" /></van-col>
-    <van-col span="8"> <span>VMUSICJIN</span></van-col>
-    <van-col span="8"> <van-icon name="search"/></van-col>
-    </van-row> -->
     <div class="header">
-      <van-icon name="wap-nav" />
+     <van-icon name="wap-nav"/>
       <span>VMUSICJIN</span>
-      <van-icon name="search" />
+      <svg class="icon" aria-hidden="true" @click="$router.push('/search')" >
+        <use xlink:href="#icon-sousuo"></use>
+      </svg>
     </div>
   </div>
 </template>
@@ -21,22 +18,26 @@ export default {
   methods: {},
 };
 </script>
-
 <style lang ="less" scoped>
 * {
   margin: 0;
   padding: 0;
 }
-.header{
+.header {
   width: 375px;
   height: 25px;
   background-color: #d44439;
-  display:flex;
+  display: flex;
   justify-content: space-between;
   color: white;
-   font-size:18px;
-  .van-icon,span{
-    margin:4px 4px;
+  font-size: 18px;
+  .van-icon{
+    margin: .1067rem;
+    padding: 0 .2667rem;
   }
-}
+  .icon{
+    margin: .1067rem;
+    padding: 0 .2667rem;
+  }
+  }
 </style>
